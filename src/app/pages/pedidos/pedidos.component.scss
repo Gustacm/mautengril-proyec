@@ -1,7 +1,48 @@
+.table-body{
+background-color: aqua;
+}
+
+.table-items{
+    width: 100%;
+    background-color: chartreuse;
+
+}
+
+
+
 .form-box{
     height: auto;
     display: flex;
     justify-content: center;
     align-items: center ;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.281);
+}
+
+.table-box{
+    height: auto;
+    width: 100%;
+
+    display: flex;
+    justify-content: space-around;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.281);
+    background-color: #00000005;
+
+}
+.container{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(58, 57, 57, 0.418);
+    transition: 0.3s;
+    background-color: #00000007;
+}
+
+.table-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #00000007;
 }
