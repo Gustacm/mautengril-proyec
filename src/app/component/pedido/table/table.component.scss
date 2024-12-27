@@ -1,14 +1,27 @@
+
 .table-container{
-width: 100vh;
-height: 100%;
+    width: 100vh;
+    background-color: salmon;
 }
+
+.table-body{
+    width: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+
+}
+
+
 .table-items{
+    width: 100%;
+    font-weight: bolder;
     display: grid;
     align-items: center;
     justify-content: center;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr ;
     gap: 20px;
-
+    font-size: large;
     padding: 10px;
     margin: 10px;
     border-radius: 10px;
@@ -16,6 +29,16 @@ height: 100%;
     transition: 0.3s;
 }
 
+.table-items:hover{
+    background-color: rgba(0, 0, 0, 0.068);
+    transform: scale(1.02);
+}
+
+.table-thead{
+    background-color: rgb(208, 255, 0);
+    border-radius: 3px;
+    width: 100vh;
+}
 .table-header{
     background-color: rgba(0, 0, 0, 0.068); 
     border-radius: 3px;
