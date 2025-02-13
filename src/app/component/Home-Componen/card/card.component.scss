@@ -1,0 +1,113 @@
+.product-card {
+    width: 190px;
+    height: auto;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(66, 51, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    margin: 9px;
+}
+
+.product-card img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 6px 6px rgba(155, 107, 2, 0.397);
+}
+
+.product-card .info {
+    padding: 6px;
+}
+
+.product-card h2 {
+    font-size: 23px;
+    color: #333;
+    font-weight: bold;
+}
+
+.Description {
+    width: 100%;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 16px;
+    color: #666;
+    max-width: 250px;
+}
+
+.product-card p {
+    font-size: 16px;
+    color: #666;
+}
+
+.product-card span {
+    font-size: 20px;
+    color: #f39c12;
+}
+
+.footer-card {
+    width: 95%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.like {
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+    transition: fill 0.3s ease;
+    fill: #df1600;
+}
+
+
+.dislike {
+    fill: #cccccc;
+    transition: fill 0.4s ease;
+}
+
+/* Hot Card Styling */
+.hot-card {
+    padding: 0;
+
+    border: 1px solid #e74c3c;
+box-shadow: 0 4px 4px rgba(231, 76, 60, 0.4);
+    animation: pulse 2.0s infinite alternate;
+}
+
+.hot-card::before {
+    content: "🔥 Hot";
+    position: absolute;
+    top: 7px;
+
+    background: #e0321fd7;
+    color: white;
+    padding: 8px 2px;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+@keyframes pulse {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.02);
+    }
+}
+
+.price {
+    font-size: 16px;
+    color: #f39c12;
+    font-weight: bold;
+    display: flex;
+    justify-content: flex-end;
+    align-items: end;
+}

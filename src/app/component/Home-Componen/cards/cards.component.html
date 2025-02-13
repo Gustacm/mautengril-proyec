@@ -1,0 +1,17 @@
+
+<div class="display">
+
+
+
+   <ng-container *ngFor="let date of products">
+@if(date.isHot()){
+    <app-card [date]="date"></app-card>
+}@else{
+    <app-card [date]="date"></app-card>
+};
+
+        
+    </ng-container>
+
+
+</div>
