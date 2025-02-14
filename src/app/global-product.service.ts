@@ -15,8 +15,20 @@ export class GlobalProductService {
 
   hotProducts = signal <Product[] > (this.menuStore().filter((product: Product) => product.isHot() === true));
   noHotProducts = signal <Product[] > (this.menuStore().filter((product: Product) => product.isHot() === false));
-  categories = signal <string[] > (this.menuStore().map((product: Product) => product.category));
+  categories = signal <string[] > ([...new Set(this.menu().map((product: Product) => product.category))]);
   constructor() {}
 
+
+ 
+
+
+  filterByCategory(category: string) {
+  let resultado: Product[] = this.menu().filter((product: Product) => product.category === category);
+  this.menuStore.update(() => [...resultado]);
+  console.log("resultado",this.menuStore());
+  return this.menuStore();
+
+
+  }
 
 }

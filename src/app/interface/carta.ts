@@ -1,11 +1,11 @@
  export const  dataMenuJs = [
     {
       id: 1,
-        nombre: 'Pizza Pepperoni',
+        nombre: 'Hamburguesa  Pepperoni',
         precio: 15000,
         descripcion: 'Pizza con base de tomate, queso mozzarella y pepperoni',
         like: 0.8,
-        category: 'Pizza',
+        category: 'Hamburguesas',
         isHot() {
           if(this.like > 4) {
               return true;
@@ -32,11 +32,11 @@
     },
     {
       id: 3,
-        nombre: 'Tacos al Pastor',
+        nombre: 'Hamburgusa Tacos al Pastor',
         precio: 8000,
         descripcion: 'Tacos con carne de cerdo marinada y piña',
         like: 3.9,
-        category: 'Tacos',
+        category: 'Hamburguesas',
         isHot() {
           if(this.like > 4) {
               return true;
@@ -58,11 +58,11 @@
     },
     {
       id: 5,
-        nombre: 'Ensalada César',
+        nombre: 'Sushi César',
         precio: 10000,
         descripcion: 'Lechuga fresca con pollo, queso parmesano y aderezo César',
         like: 3.5,
-        category: 'Ensaladas',
+        category: 'Sushi',
         isHot() {
             if(this.like > 4) {
                   return true;
