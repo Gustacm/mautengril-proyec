@@ -1,0 +1,25 @@
+
+<div class="search-bar">
+    <div class="search-input">
+      <input type="text" [(ngModel)]="searchQuery" placeholder="¿Qué quieres comer hoy?">
+      <button><i class="fas fa-search"></i></button>
+    </div>
+    <div class="filters">
+
+@for (item of categories; track $index) {
+    <button 
+    [class.active]="selectedCategory === item" 
+    (click)="selectCategory(item)">
+{{ item }}
+</button>
+
+}
+
+
+
+
+
+
+    </div>
+  </div>
+  

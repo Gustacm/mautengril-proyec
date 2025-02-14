@@ -1,17 +1,18 @@
 
+
+<!-- Display the filtered products in the cards component. -->
+<section>
+
+</section>
 <div class="display">
 
 
 
-   <ng-container *ngFor="let date of products">
-@if(date.isHot()){
-    <app-card [date]="date"></app-card>
-}@else{
-    <app-card [date]="date"></app-card>
-};
 
-        
-    </ng-container>
+@for(product of this.products() ; track products() ){
+    <app-card [date]="product"></app-card>  
+}
+
 
 
 </div>

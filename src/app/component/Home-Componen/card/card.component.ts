@@ -11,13 +11,14 @@ import { Component, Input, signal } from '@angular/core';
 export class CardComponent {
   like=signal('dislike');
   colorLike=signal('rgba(255, 230, 0, 0.27)');
+  products: any;
+  
   
   @Input() date: any;
-  products: any;
 
   ngOnInit() {
     this.products = this.date;
-    console.log(this.products);
+    console.log("este  es  es de la  card",this.products);
   }
 
 
