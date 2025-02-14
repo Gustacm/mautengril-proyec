@@ -6,6 +6,12 @@
 </section>
 <div class="display">
 
+<h1>Tendenca Hot</h1>
+
+
+@for(product of this.hotProducts() ; track hotProducts() ){
+    <app-card [date]="product"></app-card>  
+}
 
 
 
