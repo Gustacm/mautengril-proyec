@@ -1,0 +1,24 @@
+.filters {
+  display: flex;
+  flex-wrap: wrap; // Permite que los botones pasen a la siguiente línea
+  gap: 10px;
+  justify-content: center;
+
+  button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 20px;
+    background: #e0e0e0;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+
+    &.active {
+      background: #ff9800;
+      color: #fff;
+    }
+
+    &:hover {
+      background: darken(#e0e0e0, 10%);
+    }
+  }
+}

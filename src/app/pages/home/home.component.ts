@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { CardsComponent } from '../../component/Home-Componen/cards/cards.component';
 import { CommonModule } from '@angular/common';
-import { DisplayFilterComponent } from "../../component/Home-Componen/display-filter/display-filter.component";
+import { DisplayFilterComponent } from "../../component/Home-Componen/filter-Componet/display-filter/display-filter.component";
 
 
 
@@ -13,5 +13,6 @@ import { DisplayFilterComponent } from "../../component/Home-Componen/display-fi
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
+
 
 }

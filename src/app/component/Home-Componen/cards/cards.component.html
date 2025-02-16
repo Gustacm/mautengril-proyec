@@ -1,31 +1,30 @@
 
 
-<!-- Display the filtered products in the cards component. -->
+@for(category of this.categories(); track categories()){
+  <app-category-headings [categories]="category"></app-category-headings>
 
-
-
-@for( category of this.categories() ; track categories() ){
-    <app-category-headings [categories]="category"></app-category-headings>
-    <div class="display">
-              
-        
-        
-        @for(product of this.hotProducts() ; track hotProducts() ){
-            @if(product.category == category){
-                <app-card [date]="product"></app-card>  
-            }
-           
-            }    
-
-@for(product of this.products() ; track products() ){
-    @if(product.category == category){
-        <app-card [date]="product"></app-card>  
-    }
+  <div class="display">
     
+    
+    @for(product of this.products(); track products()){
+      @if(product.category == category){
+   
+        @if(product.isHot()){
+              <app-card [date]="product"></app-card>
+        }
+        
+        @if(!product.isHot()){
+          <app-card [date]="product"></app-card>
+        }
+      }
+    }
+  </div>
 }
-    </div>
 
-}
+
+
+
+
 
 
 

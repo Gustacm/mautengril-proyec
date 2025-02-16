@@ -1,0 +1,10 @@
+<div class="filters">
+    @for (item of categories; track $index) {
+      <button 
+        [class.active]="selectedCategory === item" 
+        (click)="selectCategory(item)">
+        {{ item }}
+      </button>
+    }
+  </div>
+  

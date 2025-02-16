@@ -1,4 +1,4 @@
-import { Component, inject, signal } from '@angular/core';
+import { Component, inject, signal, computed} from '@angular/core';
 import { CardComponent } from '../card/card.component';
 import { CommonModule } from '@angular/common';
 import { GlobalProductService } from '../../../global-product.service';
@@ -17,21 +17,16 @@ import { CategoryHeadingsComponent } from "../category-headings/category-heading
 
 export class CardsComponent {
     private dataMenu = inject(GlobalProductService);
-    products = signal(this.dataMenu.noHotProducts());
-    hotProducts = signal(this.dataMenu.hotProducts());
-    categories = signal(this.dataMenu.categories());
-    hotTyp="Hot Products";
+    products = computed(() => this.dataMenu.menuStore()); 
+    hotProducts = computed(() => this.dataMenu.hotProducts());
+    categories = computed(() => this.dataMenu.categories());
+    hotTyp = "Hot Products";
 
 
-onInit() {
-
-
-  
-}
 
 constructor() {
 
-  console.log("menu cards",this.dataMenu.hotProducts());
+ 
 }
 
 

@@ -28,23 +28,4 @@
         cursor: pointer;
       }
     }
-  
-    .filters {
-      display: flex;
-      gap: 10px;
-  
-      button {
-        padding: 8px 12px;
-        border: none;
-        border-radius: 20px;
-        background: #e0e0e0;
-        cursor: pointer;
-  
-        &.active {
-          background: #ff9800;
-          color: #fff;
-        }
-      }
-    }
-  }
-  
+}
