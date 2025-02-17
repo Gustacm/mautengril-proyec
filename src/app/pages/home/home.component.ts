@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { DisplayFilterComponent } from "../../component/Home-Componen/filter-Componet/display-filter/display-filter.component";
 import { MatIconModule } from '@angular/material/icon';
 import { DisplayFooterComponent } from "../../component/Home-Componen/footer/display-footer/display-footer.component";
-import { HeaderComponent } from "../../component/Home-Componen/header/header.component";
+import { HeaderComponent } from "../../component/Home-Componen/header-componet/header/header/header.component";
 
 
 @Component({
