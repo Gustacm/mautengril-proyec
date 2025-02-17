@@ -1,8 +1,8 @@
 
 @if(products.isHot()) {
     
-    <div class="product-card hot-card" >
-        <img src="https://www.goodnes.com/sites/g/files/jgfbjl321/files/srh_recipes/aafaf8ff82d5b614e8f1522f4e355766.png" alt="Hamburguesa Hot">
+    <div class="product-card hot-card" [id]="products.id">
+        <img src="https://www.goodnes.com/sites/g/files/jgfbjl321/files/srh_recipes/aafaf8ff82d5b614e8f1522f4e355766.png" alt="products.nombre">
         <div class="info">
             <h2>{{products.nombre}}</h2>
             <div class="Description">
@@ -28,7 +28,7 @@
 
 
 }@else {<div class="product-card" [id]="products.id">
-    <img src="https://www.goodnes.com/sites/g/files/jgfbjl321/files/srh_recipes/aafaf8ff82d5b614e8f1522f4e355766.png" alt="Hamburguesa">
+    <img src="https://www.goodnes.com/sites/g/files/jgfbjl321/files/srh_recipes/aafaf8ff82d5b614e8f1522f4e355766.png" alt="products.nombre">
     <div class="info">
         <h2>{{products.nombre}}</h2>
         <div class="Description">

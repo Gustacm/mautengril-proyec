@@ -1,9 +1,9 @@
 <div class="filters">
-    @for (item of categories; track $index) {
+    @for (item of categories; track item ) {
       <button 
         [class.active]="selectedCategory === item" 
         (click)="selectCategory(item)">
-        {{ item }}
+        {{ item }} <mat-icon>{{ categoryIcon }}</mat-icon>
       </button>
     }
   </div>

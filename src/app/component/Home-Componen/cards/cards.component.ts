@@ -3,6 +3,7 @@ import { CardComponent } from '../card/card.component';
 import { CommonModule } from '@angular/common';
 import { GlobalProductService } from '../../../global-product.service';
 import { CategoryHeadingsComponent } from "../category-headings/category-headings.component";
+import { Product } from '../../../interface/Product.interface';
 
 
 
@@ -21,12 +22,19 @@ export class CardsComponent {
     hotProducts = computed(() => this.dataMenu.hotProducts());
     categories = computed(() => this.dataMenu.categories());
     hotTyp = "Hot Products";
+    idCategory=Math.random()
 
 
 
 constructor() {
 
- 
+}
+trackByCategory(index: number, category: string): string {
+  return category;
+}
+
+trackByProduct(index: number, product: Product): number {
+  return product.id;
 }
 
 

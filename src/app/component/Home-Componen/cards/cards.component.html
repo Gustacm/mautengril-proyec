@@ -1,12 +1,12 @@
 
 
-@for(category of this.categories(); track categories()){
+@for(category of this.categories(); track trackByCategory){
   <app-category-headings [categories]="category"></app-category-headings>
 
   <div class="display">
     
     
-    @for(product of this.products(); track products()){
+    @for(product of this.products(); track trackByProduct){
       @if(product.category == category){
    
         @if(product.isHot()){

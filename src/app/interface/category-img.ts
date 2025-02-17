@@ -1,6 +1,5 @@
-const catgory= [
-    {id: 1, name: 'Hamburguesas', img: "http://www.w3.org/2000/svg"},
-    {id: 2, name: 'Sushi', img: '#emojione--sushi'},
-
-  ];
-  export default catgory;
+export const iconCategory = [
+    { id:Math.random(), 'Hamburguesas':'lunch_dining'}, 
+    { id:Math.random(), 'All':'all_inclusive'}, 
+    { id:Math.random(), 'Sushi':'set_meal'}, 
+];

@@ -1,6 +1,6 @@
  export const  dataMenuJs = [
     {
-      id: 1,
+      id: Math.random(),
         nombre: 'Hamburguesa  Pepperoni',
         precio: 15000,
         descripcion: 'Pizza con base de tomate, queso mozzarella y pepperoni',
@@ -15,7 +15,7 @@
 
     },
     {
-      id: 2,
+      id: Math.random(),
         nombre: 'Sushi Roll',
         precio: 12000,
         descripcion: 'Rollos de sushi con salmón, aguacate y queso crema',
@@ -31,7 +31,7 @@
          
     },
     {
-      id: 3,
+      id: Math.random(),
         nombre: 'Hamburgusa Tacos al Pastor',
         precio: 8000,
         descripcion: 'Tacos con carne de cerdo marinada y piña',
@@ -44,7 +44,7 @@
         }
     },
     {
-      id: 4,
+      id: Math.random(),
         nombre: 'Hamburguesa BBQ',
         precio: 18000,
         descripcion: 'Hamburguesa de carne de res con salsa BBQ y cebolla caramelizada',
@@ -57,7 +57,7 @@
         }
     },
     {
-      id: 5,
+      id: Math.random(),
         nombre: 'Sushi César',
         precio: 10000,
         descripcion: 'Lechuga fresca con pollo, queso parmesano y aderezo César',
