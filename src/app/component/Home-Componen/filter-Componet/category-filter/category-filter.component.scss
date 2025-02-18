@@ -1,4 +1,4 @@
-@use 'sass:color';
+@import  '../../../../../../styles.scss';
 
 .filters {
   display: flex;
@@ -21,7 +21,7 @@
     transition: background 0.3s, color 0.3s;
 
     &.active {
-      background: #ff9800;
+      background: $primary-color;
       color: #fff;
     }
 

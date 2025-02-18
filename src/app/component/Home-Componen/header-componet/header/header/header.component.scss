@@ -1,32 +1,18 @@
+@import  '../../../../../../styles.scss';
+
+
 .header {
     display: flex;
     flex-direction: column;
     align-items:center;
     justify-content: center;
-    padding: 0 16px;
     height: 75%;
-    background-color: #ffa600f5;
+    background-color:$primary-color;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    top: 0;
-    left: 0;
-    width: 93%;
+    width: 100%;
 
   }
   
-  .menu-button,
-  .cart-button {
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: white;
-    font-size: 24px;
-    transition: transform 0.3s ease;
-  }
-  
-  .menu-button:hover,
-  .cart-button:hover {
-    transform: scale(1.1);
-  }
   
   .title {
     font-size: 18px;
@@ -36,61 +22,13 @@
     flex-grow: 1;
     margin-left: 16px;
   }
-  
-  .cart-container {
-    position: relative;
-  }
-  
-  .cart-count {
-    position: absolute;
-    top: -8px;
-    right: -8px;
-    background-color: red;
-    color: white;
-    font-size: 12px;
-    font-weight: bold;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
+
+  .carrusel-div{
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
+
+
+
   }
-
-
-
-
-
-/*  
-
-
-
-.title {
-  font-size: 18px;
-  font-weight: bold;
-  color: white;
-  text-align: center;
-  margin-bottom: 16px;
-}
-
-.carousel-container {
-  width: 100%;
-  overflow: hidden;
-  position: relative;
-}
-
-.carousel {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-}
-
-.carousel-image {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  min-height: 150px; /* Altura mínima para las imágenes 
-  
-} 
-  */
-
-

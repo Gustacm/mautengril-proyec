@@ -10,8 +10,8 @@ export class CarruselComponent {
 
   slides = [
     { image: 'burguer.png' },
-    { image: '' },
-    { image: '' }
+    { image: 'hot-dog.png' },
+    { image: 'fajitas.png' }
   ];
 
   currentIndex = 0;

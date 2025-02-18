@@ -1,14 +1,17 @@
 .carousel {
-    position: relative;
-    width: 85%;
-    height: 100%;
-    max-width: 630px;
-    margin: auto;
+
+    width: 300px;
+    
     overflow: hidden;
+ 
+    
+
   }
   
   .carousel-container {
     display: flex;
+    width: 300px;
+
     transition: transform 0.5s ease-in-out;
   }
   
@@ -20,24 +23,26 @@
   .carousel-item img {
     width: 100%;
     height: auto;
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
   }
   
   .prev, .next {
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
+    top: 40%;
+    transform: translateY(-100%);
+    background-color: rgba(206, 201, 201, 0);
     color: white;
     border: none;
-    padding: 10px;
     cursor: pointer;
   }
   
   .prev {
-    left: 10px;
+    left: 20px;
   }
   
   .next {
-    right: 10px;
+    right: 30px;
   }
