@@ -29,13 +29,6 @@ export class CardsComponent {
 constructor() {
 
 }
-trackByCategory(index: number, category: string): string {
-  return category;
-}
-
-trackByProduct(index: number, product: Product): number {
-  return product.id;
-}
 
 
 

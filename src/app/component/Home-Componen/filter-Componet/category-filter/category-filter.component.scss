@@ -1,4 +1,5 @@
-@import  '../../../../../../styles.scss';
+@use '../../../../../style/variable' as *;
+@use 'sass:color';
 
 .filters {
   display: flex;
@@ -18,7 +19,7 @@
     border-radius: 20px;
     background: #e0e0e0;
     cursor: pointer;
-    transition: background 0.3s, color 0.3s;
+    transition: 0.3s, color 0.3s;
 
     &.active {
       background: $primary-color;
@@ -26,7 +27,7 @@
     }
 
     &:hover {
-      background: darken(#e0e0e0, 10%);
+      background: color.adjust(#e0e0e0, $lightness: -10%);
     }
   }
 }

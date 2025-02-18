@@ -1,48 +1,118 @@
+// Variables SASS
+$primary-color: rgba(206, 201, 201, 0); 
+$text-color: white;
+$bg-overlay: rgba(0, 0, 0, 0.5);
+
+// Mixin para botones del carrusel
+@mixin button-style {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: $primary-color;
+  color: $text-color;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  padding: 10px;
+  z-index: 10;
+}
+
+// Estilos principales
 .carousel {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-    width: 300px;
-    
-    overflow: hidden;
- 
-    
+.carousel-container {
 
-  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease-in-out; // Corregido el error en transition
+}
+
+.carousel-item {
   
-  .carousel-container {
-    display: flex;
-    width: 300px;
+  position: relative;
+  min-width: 70%;
+  box-sizing: border-box;
 
-    transition: transform 0.5s ease-in-out;
+  img {
+    width: 80%; // Se adapta al tamaño del contenedor
+    max-width: 500px; 
+    display: block;
+    margin: 0 auto; // Centrado automático
   }
-  
+}
+
+// Botones de navegación
+.prev {
+  @include button-style;
+  left: 20px;
+}
+
+.next {
+  @include button-style;
+  right: 20px;
+}
+
+.texCarrusel {
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-40%);
+  color: $text-color;
+  font-size: 90px;
+  font-weight: bold;
+  text-align: center;
+  z-index: 1000;
+  padding: 10px 20px;
+  border-radius: 5px;
+  width: auto;
+  white-space: nowrap;
+}
+
+// 📱 Responsividad 
+@media (max-width: 768px) {
+
+
   .carousel-item {
-    min-width: 100%;
-    box-sizing: border-box;
-  }
-  
-  .carousel-item img {
-    width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    min-width: 30%; // Reduce el tamaño del slide
     
+
   }
+
+  .texCarrusel {
+    position: static;
+    font-size: 39px; 
+    top: 90%;
+    padding: 0;
+    margin: 0;
   
+   
+  }
+
+  
+
   .prev, .next {
-    position: absolute;
-    top: 40%;
-    transform: translateY(-100%);
-    background-color: rgba(206, 201, 201, 0);
-    color: white;
-    border: none;
-    cursor: pointer;
+    font-size: 20px;
+    padding: 9px;
   }
-  
-  .prev {
-    left: 20px;
+}
+
+// 🖥️ Ajustes para pantallas muy grandes
+@media (min-width: 1200px) {
+  .carousel-item {
+    min-width: 30%;
   }
-  
-  .next {
-    right: 30px;
+
+  .texCarrusel {
+    font-size: 100px;
   }
+}

@@ -18,7 +18,6 @@ export class CardComponent {
 
   ngOnInit() {
     this.products = this.date;
-    console.log("este  es  es de la  card",this.products);
   }
 
 

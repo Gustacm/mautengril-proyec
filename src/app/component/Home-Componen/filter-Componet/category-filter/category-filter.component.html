@@ -1,5 +1,5 @@
 <div class="filters">
-    @for (item of categories; track item ) {
+    @for (item of categories; track $index + 13 ) {
       <button 
         [class.active]="selectedCategory === item" 
         (click)="selectCategory(item)">

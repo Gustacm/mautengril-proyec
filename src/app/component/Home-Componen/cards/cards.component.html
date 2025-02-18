@@ -1,20 +1,20 @@
 
 
-@for(category of this.categories(); track trackByCategory){
-  <app-category-headings [categories]="category"></app-category-headings>
+@for( category of this.categories(); track $index*3 ){
+  <app-category-headings [categories]="category" id="category"></app-category-headings>
 
   <div class="display">
     
     
-    @for(product of this.products(); track trackByProduct){
+    @for(product of this.products(); track $index+3){
       @if(product.category == category){
    
         @if(product.isHot()){
-              <app-card [date]="product"></app-card>
+              <app-card [date]="product" [id]="product.category"></app-card>
         }
         
         @if(!product.isHot()){
-          <app-card [date]="product"></app-card>
+          <app-card [date]="product" [id]="product.category"></app-card>
         }
       }
     }

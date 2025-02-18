@@ -20,7 +20,7 @@
                 </button>
             </div>
             <div class="price">
-                <h3>{{ products.precio |  currency:'CLP':true }}</h3>
+                <h3>{{ products.precio |  currency:'CLP': 'symbol' }}</h3>
         </div>
         </div>
     </div>
@@ -45,7 +45,7 @@
             </button>
         </div>
         <div class="price">
-            <h3>{{  products.precio |  currency:'CLP':true }}</h3>
+            <h3>{{  products.precio |  currency:'CLP':'symbol' }}</h3>
     </div>
 </div>
 </div>

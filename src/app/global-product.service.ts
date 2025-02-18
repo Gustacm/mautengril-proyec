@@ -27,7 +27,7 @@ export class GlobalProductService {
     this.hotProducts.set(filteredMenu.filter(product => product.isHot()));
     this.noHotProducts.set(filteredMenu.filter(product => !product.isHot()));
 
-    console.log("Filtrado por categoría:", category, this.menuStore());
+   
   }
 
 
@@ -82,7 +82,7 @@ export class GlobalProductService {
     this.hotProducts.set(filteredMenu.filter(product => product.isHot()));
     this.noHotProducts.set(filteredMenu.filter(product => !product.isHot()));
   
-    console.log("Filtrado por búsqueda:", search, this.menuStore());
+    
   }
   
   
