@@ -1,14 +1,14 @@
 // Variables SASS
 $primary-color: rgba(206, 201, 201, 0); 
 $text-color: white;
-$bg-overlay: rgba(0, 0, 0, 0.5);
+$bg-overlay: rgba(0, 0, 0, 0);
 
 // Mixin para botones del carrusel
 @mixin button-style {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: $primary-color;
+  background-color: $bg-overlay;
   color: $text-color;
   border: none;
   cursor: pointer;
@@ -20,38 +20,47 @@ $bg-overlay: rgba(0, 0, 0, 0.5);
 // Estilos principales
 .carousel {
   width: 100%;
-  height: 100%;
+  height: 300px; // Altura fija para el carrusel
   overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: relative;
 }
 
 .carousel-container {
-
   display: flex;
-  align-items: center;
-  justify-content: center;
-  max-width: 100%;
-  height: 100%;
-  transition: transform 0.5s ease-in-out; // Corregido el error en transition
+  transition: transform 0.5s ease-in-out; // Animación suave
 }
 
 .carousel-item {
-  
-  position: relative;
-  min-width: 70%;
+  min-width: 100%;
   box-sizing: border-box;
+  text-align: center;
 
   img {
-    width: 80%; // Se adapta al tamaño del contenedor
+    width: 80%; 
     max-width: 500px; 
     display: block;
-    margin: 0 auto; // Centrado automático
+    margin: 0 auto; 
   }
 }
 
-// Botones de navegación
+
+.texCarrusel {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: $text-color;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  z-index: 1000;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.7);
+  white-space: nowrap;
+}
+
+
 .prev {
   @include button-style;
   left: 20px;
@@ -62,57 +71,48 @@ $bg-overlay: rgba(0, 0, 0, 0.5);
   right: 20px;
 }
 
-.texCarrusel {
-  position: fixed;
-  top: 10%;
-  left: 50%;
-  transform: translateX(-40%);
-  color: $text-color;
-  font-size: 90px;
-  font-weight: bold;
-  text-align: center;
-  z-index: 1000;
-  padding: 10px 20px;
-  border-radius: 5px;
-  width: auto;
-  white-space: nowrap;
-}
-
 // 📱 Responsividad 
 @media (max-width: 768px) {
-
-
   .carousel-item {
-    min-width: 30%; // Reduce el tamaño del slide
-    
-
+    min-width: 100%; // Cada slide ocupa todo el ancho en pantallas pequeñas
   }
 
   .texCarrusel {
-    position: static;
-    font-size: 39px; 
-    top: 90%;
-    padding: 0;
-    margin: 0;
+    font-size: 18px; 
+    bottom: 7px; 
+  }
+  .carousel-item {
+        img {
+      width: 60%; 
   
-   
+    }
+  }
+  .texCarrusel {
+    position: fixed;
+    text-decoration:overline;
+
+
+    background-color: rgba(0, 0, 0, 0);
+
   }
 
-  
+
+
+
 
   .prev, .next {
-    font-size: 20px;
-    padding: 9px;
+    font-size: 18px; // Reducir el tamaño de los botones
+    padding: 8px;
   }
 }
 
 // 🖥️ Ajustes para pantallas muy grandes
 @media (min-width: 1200px) {
   .carousel-item {
-    min-width: 30%;
+    min-width: 100%; // Mantener el ancho completo
   }
 
   .texCarrusel {
-    font-size: 100px;
+    font-size: 36px; // Aumentar el tamaño del texto
   }
 }

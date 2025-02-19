@@ -1,4 +1,5 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, AfterViewInit } from '@angular/core';
+import { interval, Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-carrusel',
@@ -8,29 +9,49 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 export class CarruselComponent {
   slides = [
     { id: 334, image: 'burguer.png', tex: 'Las mejores ofertas' },
-    { id: 336, image: 'hot-dog.png', tex: 'Disfruta los mejores hot-dogs' },
-    { id: 37, image: 'fajitas.png', tex: 'Sabores irresistibles' }
+    { id: 336, image: 'hot-dog.png', },
+    { id: 37, image: 'fajitas.png',  }
   ];
-
   currentIndex = 0;
-  intervalId: any; // Variable para el intervalo del carrusel automático
+  intervalSubscription: Subscription = new Subscription();
 
-
-
-
-
-  prevSlide(): void {
+  prevSlide() {
     this.currentIndex = (this.currentIndex === 0) ? this.slides.length - 1 : this.currentIndex - 1;
   }
 
-  nextSlide(): void {
+  nextSlide() {
     this.currentIndex = (this.currentIndex === this.slides.length - 1) ? 0 : this.currentIndex + 1;
   }
 
-  startAutoSlide(): void {
-    this.intervalId = setInterval(() => {
+ /*  ngOnInit() {
+    console.log('ngOnInit llamado');
+  }
+
+  ngAfterViewInit() {
+    // Usamos ngAfterViewInit para iniciar el intervalo
+    console.log('Carrusel View Initialized');
+    this.intervalSubscription = interval(9000).subscribe(() => {
+      console.log('Changing slide');
       this.nextSlide();
-    }, 5000); // Cambia de slide cada 5 segundos
+    });
+  } */
+
+  ngOnDestroy() {
+    console.log('Carrusel Component Destroyed');
+    if (this.intervalSubscription) {
+      this.intervalSubscription.unsubscribe();
+      console.log('Intervalo cancelado');
+    }
   }
 }
 
+
+  
+  
+  
+/*   ngOnDestroy() {
+console.log('CarruselComponent destruido');
+if (this.intervalSubscription) {
+  this.intervalSubscription.unsubscribe();
+  console.log('Intervalo cancelado');
+} */
