@@ -3,7 +3,6 @@ $primary-color: rgba(206, 201, 201, 0);
 $text-color: white;
 $bg-overlay: rgba(0, 0, 0, 0);
 
-// Mixin para botones del carrusel
 @mixin button-style {
   position: absolute;
   top: 50%;
@@ -20,14 +19,17 @@ $bg-overlay: rgba(0, 0, 0, 0);
 // Estilos principales
 .carousel {
   width: 100%;
-  height: 300px; // Altura fija para el carrusel
+  height: 100%;
   overflow: hidden;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .carousel-container {
   display: flex;
-  transition: transform 0.5s ease-in-out; // Animación suave
+  transition: transform 0.5s ease-in-out;
 }
 
 .carousel-item {
@@ -71,22 +73,26 @@ $bg-overlay: rgba(0, 0, 0, 0);
   right: 20px;
 }
 
+
+
 // 📱 Responsividad 
 @media (max-width: 768px) {
   .carousel-item {
-    min-width: 100%; // Cada slide ocupa todo el ancho en pantallas pequeñas
+    width: 100%;
+    height:100% ;
+
+    img{
+     width: 230px; 
+     height: -30%;
+    }
   }
 
   .texCarrusel {
     font-size: 18px; 
     bottom: 7px; 
   }
-  .carousel-item {
-        img {
-      width: 60%; 
   
-    }
-  }
+
   .texCarrusel {
     position: fixed;
     text-decoration:overline;
@@ -95,14 +101,23 @@ $bg-overlay: rgba(0, 0, 0, 0);
     background-color: rgba(0, 0, 0, 0);
 
   }
-
-
+  .prev {
+    @include button-style;
+    left: 1px;
+  }
+  
+  .next {
+    @include button-style;
+    right: 1px;
+  }
+  
 
 
 
   .prev, .next {
-    font-size: 18px; // Reducir el tamaño de los botones
-    padding: 8px;
+    
+    font-size: 30px; 
+    padding: 20px;
   }
 }
 

@@ -9,7 +9,7 @@ import { interval, Subscription } from 'rxjs';
 export class CarruselComponent {
   slides = [
     { id: 334, image: 'burguer.png', tex: 'Las mejores ofertas' },
-    { id: 336, image: 'hot-dog.png', },
+    { id: 336, image: 'hot-dog.png',tex: 'Las mejores ofertas'  },
     { id: 37, image: 'fajitas.png',  }
   ];
   currentIndex = 0;
@@ -36,13 +36,13 @@ export class CarruselComponent {
     });
   } */
 
-  ngOnDestroy() {
+/*   ngOnDestroy() {
     console.log('Carrusel Component Destroyed');
     if (this.intervalSubscription) {
       this.intervalSubscription.unsubscribe();
       console.log('Intervalo cancelado');
     }
-  }
+  } */
 }
 
 
