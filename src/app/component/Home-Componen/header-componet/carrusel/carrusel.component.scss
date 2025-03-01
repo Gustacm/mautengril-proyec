@@ -19,12 +19,12 @@ $bg-overlay: rgba(0, 0, 0, 0);
 // Estilos principales
 .carousel {
   width: 100%;
-  height: 100%;
+  height: 90%;
   overflow: hidden;
   position: relative;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: end;
 }
 
 .carousel-container {

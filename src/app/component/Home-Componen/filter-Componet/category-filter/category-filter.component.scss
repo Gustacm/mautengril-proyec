@@ -2,13 +2,17 @@
 @use 'sass:color';
 
 .filters {
+  padding-top: 11px;
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 9px;
   justify-content: center;
   align-items:center ;
 
   button {
+    font-size: 15px;
+    font-weight: bold;
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -16,18 +20,18 @@
     
     padding: 5px 12px;
     border: none;
-    border-radius: 20px;
-    background: #e0e0e0;
+    border-radius: 16px;
+    background: #b6b5b581;
     cursor: pointer;
     transition: 0.3s, color 0.3s;
 
     &.active {
-      background: $primary-color;
+      background:$primary-color;
       color: #fff;
     }
 
     &:hover {
-      background: color.adjust(#e0e0e0, $lightness: -10%);
+      background: color.adjust($primary-color, $lightness: 10%);
     }
   }
 }
