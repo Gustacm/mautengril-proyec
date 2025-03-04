@@ -2,32 +2,43 @@
 @use 'sass:color';
 
 .filters {
-  padding-top: 11px;
+  aspect-ratio: 3/1;
   display: flex;
-  flex-wrap: wrap;
+  position: relative;
+  overflow-x: auto; 
+  overflow-y: hidden; 
+  flex-wrap: nowrap;
   gap: 9px;
-  justify-content: center;
-  align-items:center ;
+  justify-content: flex-start;
+  align-items: center;
+  scroll-behavior: smooth; 
+  white-space: nowrap; 
+  scrollbar-width: none; // Oculta la barra de desplazamiento en Firefox
+
+  &::-webkit-scrollbar {
+    display: none; // Oculta la barra de desplazamiento en Chrome y Safari
+  }
 
   button {
-    font-size: 15px;
+    height: 60px;
+    font-size: 17px;
     font-weight: bold;
-
     display: flex;
     justify-content: center;
     align-items: center;
-    gap:2px;
-    
-    padding: 5px 12px;
+    gap: 2px;
+    padding: 4px 8px;
     border: none;
+    color: #333333;
     border-radius: 16px;
-    background: #b6b5b581;
+    background: #b6b5b5c5;
     cursor: pointer;
-    transition: 0.3s, color 0.3s;
+    transition: background 0.3s, color 0.3s;
+    flex-shrink: 0; 
 
     &.active {
       background:$primary-color;
-      color: #fff;
+      color: #ffffff;
     }
 
     &:hover {

@@ -7,7 +7,7 @@
     height: auto;
     background: #fff;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(66, 51, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(66, 51, 0, 0);
     overflow: hidden;
     text-align: center;
     margin: 9px;
@@ -16,7 +16,7 @@
 .product-card img {
     width: 100%;
     border-radius: 8px;
-    box-shadow: 0 6px 6px rgba(155, 107, 2, 0.397);
+    box-shadow: 0 6px 6px rgb(155, 107, 2);
 }
 
 .product-card .info {
