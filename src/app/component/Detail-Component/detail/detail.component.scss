@@ -1,0 +1,145 @@
+@use '../../../../style/variable' as *;
+
+
+.food-card {
+
+
+    background: white;
+    border-radius: 20px;
+    width: 100%;
+    height: 98%;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  
+    .back-button{
+      background-color: transparent ;
+
+      color: white;
+      padding: 5px 10px;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+  
+    }
+
+    header {
+      background: linear-gradient(#ffaa00ec,  #ffaa00f6, ), 
+    url('../../../../../public/tap.webp');
+      height: 80px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .nombre-head {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        color: white;
+        font-weight: bold;
+        font-size: 27px;
+        overflow: hidden;
+        text-align: start; 
+
+      }
+      
+      .logo{
+      width: 95px;
+      height: 95px;
+      margin-right: -11PX;
+      margin-top: -6px;
+ 
+      }
+    }
+    
+    .food-image {
+background-color: aqua;
+      margin-top: 3px ;
+      width: 100%;
+      height: 40%;
+      border-radius: 15px 15px 0 0;
+
+    }
+    
+  
+    .name-product {
+      text-align: center  ;
+      padding-top: 10px;
+      color: #333;
+      font-size: 30px;
+      font-weight: bold;
+      width: 100%;
+    }
+  
+    .rating {
+      color: gray;
+      font-size: 19px;
+      .star {
+        color: $primary-color;
+      }
+    }
+  
+    .description {
+      width: 90%;
+      margin: 10px auto;
+      font-size: 20px;
+      color: #555;
+      margin: 10px ;
+      margin-top: 10px;
+    }
+  
+    .quantity-control {
+      display: flex;
+      font-size: 25px;
+
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin: 10px 0;
+  
+      button {
+        background: $primary-color;
+        color: white;
+        text-align: center ;
+        border: none;
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        font-size: 30px;
+        cursor: pointer;
+      }
+    }
+  
+    footer {
+      
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 17px;
+      padding: 12px;
+  
+      .price {
+        color: aliceblue;
+        font-size: 30px;
+        font-weight: bold;
+        background: $primary-color;
+        padding: 8px 12px;
+        border-radius: 10px;
+      }
+  
+      .order-button {
+        height: 50px;
+        background: #2b1d0f;
+        color: white;
+        padding: 5px 30px;
+        border-radius: 10px;
+        border: none;
+        cursor: pointer;
+      }
+    }
+  }
+  

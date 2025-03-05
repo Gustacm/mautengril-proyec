@@ -1,0 +1,6 @@
+@if (!viewService.currentComponent()) {
+  <app-home></app-home>
+} @else {
+  <ng-container *ngComponentOutlet="viewService.currentComponent() as currentComponent; injector: viewService.componentData || undefined">
+  </ng-container>
+}

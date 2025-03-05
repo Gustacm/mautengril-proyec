@@ -1,57 +1,29 @@
-
-@if(products.isHot()) {
-    
-    <div class="product-card hot-card" [id]="products.id">
-        <img src="https://www.goodnes.com/sites/g/files/jgfbjl321/files/srh_recipes/aafaf8ff82d5b614e8f1522f4e355766.png" alt="products.nombre">
-        <div class="info">
-            <h2>{{products.nombre}}</h2>
-            <div class="Description">
-                <p>{{products.descripcion}}</p>
-            </div>
-            <div class="footer-card">
-                <span>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path [attr.fill]="colorLike()" d="m5.825 21l1.625-7.025L2 9.25l7.2-.625L12 2l2.8 6.625l7.2.625l-5.45 4.725L18.175 21L12 17.275z"/></svg> 
-                    {{products.like}} 
-                </span>
-                <button class="like" (click)="toggleLike()">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" [ngClass]=like()>
-                        <path fill-rule="evenodd" d="M4.536 5.778a5 5 0 0 1 7.07 0q.275.274.708.682q.432-.408.707-.682a5 5 0 0 1 7.125 7.016L13.02 19.92a1 1 0 0 1-1.414 0L4.48 12.795a5 5 0 0 1 .055-7.017z"/>
-                    </svg>
-                </button>
-            </div>
-            <div class="price">
-                <h3>{{ products.precio |  currency:'CLP': 'symbol' }}</h3>
-        </div>
-        </div>
-    </div>
-
-
-
-}@else {<div class="product-card" [id]="products.id">
-    <img src="https://www.goodnes.com/sites/g/files/jgfbjl321/files/srh_recipes/aafaf8ff82d5b614e8f1522f4e355766.png" alt="products.nombre">
+@if(product.isHot()) {
+  <div class="product-card hot-card" [id]="product.id" (click)="selectProduct()">
+    <img src="{{ product.Image }}" alt="{{ product.nombre }}">
     <div class="info">
-        <h2>{{products.nombre}}</h2>
-        <div class="Description">
-            <p>{{products.descripcion}}</p>
-        </div>
-        <div class="footer-card">
-            <span>                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path [attr.fill]="colorLike()" d="m5.825 21l1.625-7.025L2 9.25l7.2-.625L12 2l2.8 6.625l7.2.625l-5.45 4.725L18.175 21L12 17.275z"/></svg> 
-                {{products.like}}
-            </span>
-            <button class="like" (click)="toggleLike()">
-                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" [ngClass]=like()>
-                    <path fill-rule="evenodd" d="M4.536 5.778a5 5 0 0 1 7.07 0q.275.274.708.682q.432-.408.707-.682a5 5 0 0 1 7.125 7.016L13.02 19.92a1 1 0 0 1-1.414 0L4.48 12.795a5 5 0 0 1 .055-7.017z"/>
-                </svg>
-            </button>
-        </div>
-        <div class="price">
-            <h3>{{  products.precio |  currency:'CLP':'symbol' }}</h3>
+      <h2>{{ product.nombre }}</h2>
+      <p>{{ product.descripcion }}</p>
+      <span>{{ product.like }}</span>
+      <button class="like" (click)="toggleLike()">
+        ❤️
+      </button>
     </div>
-</div>
-</div>
-
-
+  </div>
+} @else {
+  <div class="product-card" [id]="product.id" (click)="selectProduct()">
+    <img src="{{ product.Image }}" alt="{{ product.nombre }}">
+    <div class="info">
+      <h2>{{ product.nombre }}</h2>
+      <p>{{ product.descripcion }}</p>
+      <span>{{ product.like }}</span>
+      <button class="like" (click)="toggleLike()">
+        ❤️
+      </button>
+    </div>
+  </div>
 }
+
 
 
 

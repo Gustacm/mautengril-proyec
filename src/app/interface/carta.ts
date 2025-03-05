@@ -6,6 +6,8 @@
         descripcion: 'Pizza con base de tomate, queso mozzarella y pepperoni',
         like: 0.8,
         category: 'Hamburguesas',
+        Image: 'https://cdn0.celebritax.com/sites/default/files/styles/watermark_100/public/recetas/hamburguesa_portada.jpg',
+        time:12,
         isHot() {
           if(this.like > 4) {
               return true;
@@ -21,6 +23,8 @@
         descripcion: 'Rollos de sushi con salmón, aguacate y queso crema',
         like: 4.2,
         category: 'Sushi',
+        Image: 'https://cdn0.celebritax.com/sites/default/files/styles/watermark_100/public/recetas/hamburguesa_portada.jpg',
+        time:12,
         isHot() {
           if(this.like > 4) {
               return true;
@@ -37,6 +41,8 @@
         descripcion: 'Tacos con carne de cerdo marinada y piña',
         like: 3.9,
         category: 'Hamburguesas',
+        Image: 'https://cdn0.celebritax.com/sites/default/files/styles/watermark_100/public/recetas/hamburguesa_portada.jpg',
+        time:12,
         isHot() {
           if(this.like > 4) {
               return true;
@@ -50,6 +56,9 @@
         descripcion: 'Hamburguesa de carne de res con salsa BBQ y cebolla caramelizada',
         like: 4.6,
         category: 'Hamburguesas',
+        Image: 'https://cdn0.celebritax.com/sites/default/files/styles/watermark_100/public/recetas/hamburguesa_portada.jpg',
+
+        time:22,
         isHot() {
           if(this.like > 4) {
               return true;
@@ -63,7 +72,10 @@
         descripcion: 'Lechuga fresca con pollo, queso parmesano y aderezo César',
         like: 3.5,
         category: 'Sushi',
-        isHot() {
+        Image: 'https://cdn0.celebritax.com/sites/default/files/styles/watermark_100/public/recetas/hamburguesa_portada.jpg',
+
+                time:29,
+                isHot() {
             if(this.like > 4) {
                   return true;
             }else {return false;}

@@ -1,6 +1,8 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input, signal } from '@angular/core';
-
+import { Component, Input, Injector, inject, signal } from '@angular/core';
+import { ViewService } from '../../../services/view.service';
+import { DetailComponent } from '../../Detail-Component/detail/detail.component';
+import { Product } from '../../../interface/Product.interface';
 @Component({
   selector: 'app-card',
   imports: [CommonModule],
@@ -11,15 +13,21 @@ import { Component, Input, signal } from '@angular/core';
 export class CardComponent {
   like=signal('dislike');
   colorLike=signal('rgba(255, 230, 0, 0.27)');
-  products: any;
+  product: any;
   
+
+
+
+  private viewService = inject(ViewService);
+  private injector = inject(Injector);
   
   @Input() date: any;
 
   ngOnInit() {
-    this.products = this.date;
+    this.product = this.date;
   }
 
+  
 
   toggleLike() {
     if(this.like() === 'like') {
@@ -31,4 +39,17 @@ export class CardComponent {
     this.colorLike.set('rgba(255, 230, 0, 0.51)');
     }
 }
+
+
+
+
+selectProduct() {
+  const customInjector = Injector.create({
+    providers: [{ provide: 'productData', useValue: this.product }],
+    parent: this.injector,
+  });
+
+  this.viewService.setComponent(DetailComponent, customInjector);
+}
+
 }

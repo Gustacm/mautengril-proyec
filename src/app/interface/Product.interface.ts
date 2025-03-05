@@ -5,6 +5,8 @@ export interface Product {
     descripcion: string;
     like: number;
     category: string;
+    Image: string;
+    time:number;
     isHot(): boolean;
   }
   
