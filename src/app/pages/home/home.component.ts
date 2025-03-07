@@ -5,11 +5,12 @@ import { DisplayFilterComponent } from "../../component/Home-Componen/filter-Com
 import { MatIconModule } from '@angular/material/icon';
 import { DisplayFooterComponent } from "../../component/Home-Componen/footer/display-footer/display-footer.component";
 import { HeaderComponent } from "../../component/Home-Componen/header-componet/header/header/header.component";
+import { PriceDistanceComponent } from "../../component/location/location/price-distance/price-distance.component";
 
 
 @Component({
   selector: 'app-home',
-  imports: [CardsComponent, CommonModule, DisplayFilterComponent, MatIconModule, DisplayFooterComponent, HeaderComponent],
+  imports: [CardsComponent, CommonModule, DisplayFilterComponent, MatIconModule, DisplayFooterComponent, HeaderComponent, PriceDistanceComponent],
   standalone: true,
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'

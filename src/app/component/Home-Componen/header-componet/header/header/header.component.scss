@@ -2,6 +2,11 @@
 @use './Style/responsive-Phone.scss';
 @use './Style/Responsive-Tablet.scss';
 
+.fondo{
+  background-color: #00000073;
+  height: 100%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
 .header {
   display: flex;
   flex-direction: column;
@@ -9,15 +14,16 @@
   justify-content: center;
   height: 450px;
   width: 100%;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-
+  box-shadow: 10px 4px 10px rgba(0, 0, 0, 0.1);
   background: 
     linear-gradient(to bottom, rgba(46, 37, 0, 0.918) 1%, rgba($primary-color, 0.979) 100%),
     url('../../../../../../../public/tap.webp');
-  
   background-size: cover;
   background-position: center;
+   border-radius: 0 0 20px 20px;
 }
+
+
 
 
 

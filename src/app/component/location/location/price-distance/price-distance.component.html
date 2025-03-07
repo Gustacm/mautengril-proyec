@@ -1,0 +1,9 @@
+<div class="price-distance">
+  <p class="location">
+    📍 <span>{{ placeName.split(',').slice(0, 2).join(',') }}</span>
+  </p>
+
+  <p class="shipping-cost">
+    🚚 Precio Del Envio:  <span>{{ shippingCost | currency:'CLP':'symbol':'1.0-0' }}</span>
+  </p>
+</div>

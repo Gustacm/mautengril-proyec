@@ -1,0 +1,24 @@
+<app-header-detail></app-header-detail>
+<div class="cart-container">
+    <h2>My Order</h2>
+    @for(item of cartItems; track item.id){
+        <div class="cart-item">
+            <div class="item-image">
+                <img [src]="item.Image" alt="{{ item.nombre }}">
+            </div>
+            <div class="item-details">
+                <p class="name">{{ item.nombre }}</p>
+                <p class="weight">{{ item.comments }}</p>
+                <p class="price">${{ item.precio.toFixed(2) }}</p>
+            </div>
+            <div class="quantity-control">
+                <button (click)="decreaseQuantity(item)">-</button>
+                <span>{{ item.quantity }}</span>
+                <button (click)="increaseQuantity(item)">+</button>
+            </div>
+        </div>
+    }
+
+
+</div>
+<app-footer-shopping [Data]="cartItems"></app-footer-shopping>

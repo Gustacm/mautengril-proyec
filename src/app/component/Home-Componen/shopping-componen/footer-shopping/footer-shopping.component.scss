@@ -1,0 +1,50 @@
+
+@use '../../../../../style/variable' as *;
+
+
+.cart-footer {
+  width: 100%;
+  height: 70px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: $secondary-color;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+  z-index: 1000;
+
+  .total {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+  }
+
+  .confirm-button {
+    background: $primary-color;
+    color: white;
+    border: none;
+    border-radius: 55px 0 0 0;
+    height: 100%;
+    width: 280px;
+    padding: 15px 30px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 27px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: -20px;
+      top: 0;
+      width: 40px;
+      height: 100%;
+      background-color: $primary-color;
+      border-radius: 50%;
+    }
+  }
+}

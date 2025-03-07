@@ -3,34 +3,23 @@ import { CommonModule } from '@angular/common';
 import { ViewService } from '../../services/view.service';
 import { HomeComponent } from '../home/home.component';
 import { LocationService } from '../../services/location.service';
-
+import { ShoppingComponent } from "../../component/Home-Componen/shopping-componen/shopping/shopping.component";
 
 @Component({
   selector: 'app-index',
   standalone: true,
-  imports: [HomeComponent, CommonModule],
+  imports: [CommonModule, HomeComponent],
   templateUrl: './index.component.html',
   styleUrl: './index.component.scss'
 })
-export class IndexComponent implements OnInit {
-  distanceToLocal: number | null = null; 
+export class IndexComponent  {
 
   constructor(
     public viewService: ViewService,
-    private locationService: LocationService 
-  ) {}
-  async ngOnInit() {
-    try {
-      await this.locationService.getUserLocation(); 
-      console.log(`Distancia al local: ${this.locationService.distanceMeters} metros`);
-      console.log(`Distancia al local: ${this.locationService.distanceKilometers} km`);
-      console.log(`Precio del envío: $${this.locationService.shippingCost}`);
 
-    } catch (error) {
-      console.error('Error obteniendo la ubicación:', error);
-    }
-  }
-  
+  ) {}
+
+
 
   closeComponent() {
     this.viewService.clearComponent();
