@@ -8,8 +8,10 @@ export class ViewService {
   componentData: Injector | null = null;
 
   setComponent(component: Type<any>, injector: Injector) {
+    console.log('Setting component:', component);
     this.currentComponent.set(component);
     this.componentData = injector;
+    console.log('Component set:', this.currentComponent(), 'Injector:', this.componentData);
   }
 
   clearComponent() {

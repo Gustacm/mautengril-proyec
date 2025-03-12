@@ -1,8 +1,9 @@
 import { Component, inject, Injector } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
-import { ShoppingCartComponent } from "../../shopping-componen/shopping-cart/shopping-cart.component";
-import { ViewService } from '../../../../services/view.service';
 
+import { ViewService } from '../../../../services/view.service';
+import { ShoppingCartComponent } from '../../shopping-componen/shopping-cart/shopping-cart.component';
+import { ShoppingComponent } from '../../shopping-componen/shopping/shopping.component';
 
 @Component({
   selector: 'app-display-footer',
@@ -13,24 +14,11 @@ import { ViewService } from '../../../../services/view.service';
 export class DisplayFooterComponent {
 
   private injector = inject(Injector);
-   private viewService = inject(ViewService);
+  private viewService = inject(ViewService);
 
-
-
-  onHomeClick() {
-    console.log('Home icon clicked');
-    // Lógica para navegar a la página de inicio
-  }
-
-  onSearchClick() {
-    console.log('Search icon clicked');
-    // Lógica para abrir la búsqueda
-  }
 
   onProfileClick() {
-    this.viewService.setComponent(ShoppingCartComponent, this.injector);
-    console.log('Profile icon clicked');
-    // Lógica para navegar al perfil
+    this.viewService.setComponent(ShoppingComponent, this.injector);
   }
 
 }

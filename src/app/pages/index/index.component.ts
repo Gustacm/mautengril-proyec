@@ -8,18 +8,15 @@ import { ShoppingComponent } from "../../component/Home-Componen/shopping-compon
 @Component({
   selector: 'app-index',
   standalone: true,
-  imports: [CommonModule, HomeComponent],
+  imports: [CommonModule, HomeComponent  ],
   templateUrl: './index.component.html',
   styleUrl: './index.component.scss'
 })
-export class IndexComponent  {
+export class IndexComponent {
 
   constructor(
     public viewService: ViewService,
-
   ) {}
-
-
 
   closeComponent() {
     this.viewService.clearComponent();
